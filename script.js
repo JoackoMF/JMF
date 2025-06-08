@@ -84,7 +84,7 @@ const productos = [
 
 
 // Número de WhatsApp (cambiar por el número real)
-const numeroWhatsApp = "5491138824695"; // Formato: código país + número sin +
+const numeroWhatsApp = "5491169135436"; // Formato: código país + número sin +
 
 // Estado del carrito
 let carrito = [];
