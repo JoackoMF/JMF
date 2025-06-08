@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Detalle del Producto</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <h1>MGP</h1>
+                    <span>Suplementos Premium</span>
+                </div>
+                <a href="index.html" class="nav-button home-button">Inicio</a>
+                <div class="cart-container">
+                    <button class="cart-btn" id="cart-btn">
+                        🛒 <span class="cart-count" id="cart-count">0</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" id="detalle-producto">
+        <p>Cargando información del producto...</p>
+    </main>
+
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-overlay" id="cart-overlay"></div>
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>🛒 Mi Carrito</h3>
+                <button class="close-cart" id="close-cart">✖</button>
+            </div>
+            <div class="cart-body" id="cart-body">
+                <div class="empty-cart" id="empty-cart">
+                    <p>Tu carrito está vacío</p>
+                    <span>¡Agrega algunos productos!</span>
+                </div>
+            </div>
+            <div class="cart-footer" id="cart-footer" style="display: none;">
+                <div class="cart-total">
+                    <strong>Total: <span id="cart-total">$0</span></strong>
+                </div>
+                <button class="checkout-btn" id="checkout-btn">
+                    📱 Enviar Pedido por WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Esperar que el DOM esté cargado
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const id = parseInt(params.get('id'));
+            const producto = productos.find(p => p.id === id);
+
+            const contenedor = document.getElementById('detalle-producto');
+
+            if (!producto) {
+                contenedor.innerHTML = "<p>Producto no encontrado. 🤷‍♂️</p>";
+                return;
+            }
+
+            document.title = producto.nombre;
+
+            // Renderizar el detalle del producto con la nueva estructura
+            contenedor.innerHTML = `
+                <div class="product-detail">
+                    <div class="product-layout">
+                        <div class="product-image-container">
+                            <img src="${producto.imagen}" alt="${producto.nombre}" class="product-image" />
+                        </div>
+                        <div class="product-info-container">
+                            <h1 class="product-detail-name">${producto.nombre}</h1>
+                            <p class="product-detail-price">${producto.precioFormateado}</p>
+                            <div class="product-detail-description">
+                                <strong>Descripción:</strong> ${producto.descripcion}
+                            </div>
+                            <div class="product-detail-ingredients">
+                                <strong>Ingredientes:</strong> ${producto.ingredientes}
+                            </div>
+                            <div class="product-detail-benefits">
+                                <strong>Beneficios:</strong> ${producto.beneficios}
+                            </div>
+                            <div class="product-detail-actions">
+                                <button class="add-to-cart-btn" onclick="agregarAlCarrito(${producto.id})">
+                                    🛒 Agregar
+                                </button>
+                                <a href="https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(`¡Hola! Me interesa el producto *${producto.nombre}* con precio ${producto.precioFormateado}. ¿Podrías darme más información?`)}" target="_blank" class="whatsapp-btn">
+                                    📱 WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>

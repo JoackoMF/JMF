@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MGP - Suplementos Premium</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <h1>MGP</h1>
+                    <span>Suplementos Premium</span>
+                </div>
+                <div class="cart-container">
+                    <button class="cart-btn" id="cart-btn">
+                        🛒 <span class="cart-count" id="cart-count">0</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Tu Salud, Nuestra Prioridad</h2>
+                <p>Descubre nuestra línea completa de suplementos de alta calidad</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Nuestros Productos</h2>
+            <div class="products-grid" id="products-grid">
+                </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>MGP</h3>
+                    <p>Suplementos de calidad premium para tu bienestar</p>
+                </div>
+                <div class="footer-contact">
+                    <p>Contáctanos por WhatsApp para realizar tu pedido</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-overlay" id="cart-overlay"></div>
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>🛒 Mi Carrito</h3>
+                <button class="close-cart" id="close-cart">✖</button>
+            </div>
+            <div class="cart-body" id="cart-body">
+                <div class="empty-cart" id="empty-cart">
+                    <p>Tu carrito está vacío</p>
+                    <span>¡Agrega algunos productos!</span>
+                </div>
+            </div>
+            <div class="cart-footer" id="cart-footer" style="display: none;">
+                <div class="cart-total">
+                    <strong>Total: <span id="cart-total">$0</span></strong>
+                </div>
+                <button class="checkout-btn" id="checkout-btn">
+                    📱 Enviar Pedido por WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
