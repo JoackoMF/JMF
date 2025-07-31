@@ -115,7 +115,7 @@ function agregarAlCarrito(productId) {
     if (!producto) return;
 
     const itemExistente = carrito.find(item => item.id === productId);
-    
+
     if (itemExistente) {
         itemExistente.cantidad += 1;
     } else {
@@ -124,7 +124,7 @@ function agregarAlCarrito(productId) {
             cantidad: 1
         });
     }
-    
+
     actualizarCarrito();
     mostrarNotificacion(`${producto.nombre} agregado al carrito`);
 }
@@ -198,23 +198,23 @@ function renderizarItemsCarrito() {
             </div>
         </div>
     `).join('');
-    
+
     cartBody.innerHTML = itemsHTML;
 }
 
 // Función para generar mensaje de WhatsApp del carrito
 function generarMensajeCarrito() {
     if (carrito.length === 0) return '';
-    
+
     let mensaje = '¡Hola! Me gustaría hacer el siguiente pedido:\n\n';
-    
+
     carrito.forEach(item => {
         mensaje += `• ${item.nombre} x${item.cantidad} - ${formatearPrecio(item.precio * item.cantidad)}\n`;
     });
-    
+
     mensaje += `\n*Total: ${formatearPrecio(calcularTotal())}*\n\n`;
     mensaje += '¿Podrían confirmar disponibilidad y método de entrega?';
-    
+
     return encodeURIComponent(mensaje);
 }
 
@@ -224,12 +224,12 @@ function realizarCheckout() {
         mostrarNotificacion('Tu carrito está vacío');
         return;
     }
-    
+
     const mensaje = generarMensajeCarrito();
     const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
-    
+
     window.open(urlWhatsApp, '_blank');
-    
+
     // Opcional: limpiar carrito después del checkout
     // carrito = [];
     // actualizarCarrito();
@@ -256,18 +256,18 @@ function mostrarNotificacion(mensaje) {
         position: fixed;
         top: 20px;
         right: 20px;
-        background: var(--verde-menta);
+        background: var(--azul-jmf);
         color: white;
         padding: 1rem 1.5rem;
         border-radius: 10px;
         z-index: 10000;
         font-weight: 600;
-        box-shadow: 0 4px 20px rgba(78, 205, 196, 0.3);
+        box-shadow: 0 4px 20px rgba(15, 29, 255, 0.3);
         animation: slideInRight 0.3s ease;
     `;
-    
+
     document.body.appendChild(notificacion);
-    
+
     setTimeout(() => {
         notificacion.remove();
     }, 3000);
@@ -304,24 +304,24 @@ function crearTarjetaProducto(producto) {
 // Función para cargar todos los productos
 function cargarProductos() {
     const grid = document.getElementById('products-grid');
-    
+
     // Mostrar loading
     grid.innerHTML = '<div class="loading">Cargando productos...</div>';
-    
+
     // Simular una pequeña carga (opcional)
     setTimeout(() => {
         // Generar HTML para todos los productos
         const productosHTML = productos.map(producto => crearTarjetaProducto(producto)).join('');
-        
+
         // Insertar en el DOM
         grid.innerHTML = productosHTML;
-        
+
         // Agregar animación de entrada
         const tarjetas = grid.querySelectorAll('.product-card');
         tarjetas.forEach((tarjeta, index) => {
             tarjeta.style.opacity = '0';
             tarjeta.style.transform = 'translateY(20px)';
-            
+
             setTimeout(() => {
                 tarjeta.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
                 tarjeta.style.opacity = '1';
@@ -333,7 +333,7 @@ function cargarProductos() {
 
 // Función para manejar errores de imágenes
 function manejarErrorImagen(img) {
-    img.src = 'https://via.placeholder.com/400x400/4ECDC4/FFFFFF?text=MGP+Producto';
+    img.src = 'https://via.placeholder.com/400x400/0f1dff/FFFFFF?text=JMF+Producto';
     img.alt = 'Imagen no disponible';
 }
 
@@ -341,21 +341,21 @@ function manejarErrorImagen(img) {
 function configurarEventListeners() {
     // Botón del carrito
     document.getElementById('cart-btn').addEventListener('click', abrirCarrito);
-    
+
     // Cerrar carrito
     document.getElementById('close-cart').addEventListener('click', cerrarCarrito);
     cartOverlay.addEventListener('click', cerrarCarrito);
-    
+
     // Checkout
     document.getElementById('checkout-btn').addEventListener('click', realizarCheckout);
-    
+
     // Cerrar carrito con ESC
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && cartModal.classList.contains('active')) {
             cerrarCarrito();
         }
     });
-    
+
     // Prevenir cierre al hacer click dentro del modal
     document.querySelector('.cart-content').addEventListener('click', (e) => {
         e.stopPropagation();
@@ -377,14 +377,14 @@ document.addEventListener('DOMContentLoaded', function() {
         cargarProductos();
     }
     actualizarCarrito();
-    
+
     // Agregar listener para errores de imágenes
     document.addEventListener('error', function(e) {
         if (e.target.tagName === 'IMG') {
             manejarErrorImagen(e.target);
         }
     }, true);
-    
+
     // Agregar estilos CSS para animaciones
     const style = document.createElement('style');
     style.textContent = `
@@ -398,7 +398,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 opacity: 1;
             }
         }
-        
+
         .notificacion {
             animation: slideInRight 0.3s ease !important;
         }
@@ -416,7 +416,7 @@ function efectosAdicionales() {
             hero.style.transform = `translateY(${scrolled * 0.5}px)`;
         }
     });
-    
+
     // Animación del contador del carrito
     function animarContador() {
         const contador = document.getElementById('cart-count');
@@ -425,7 +425,7 @@ function efectosAdicionales() {
             contador.style.transform = 'scale(1)';
         }, 200);
     }
-    
+
     // Observar cambios en el contador
     const observer = new MutationObserver(animarContador);
     observer.observe(cartCount, { childList: true, characterData: true, subtree: true });
