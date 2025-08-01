@@ -25,7 +25,7 @@ const productos = [
         nombre: "BCAA Premium",
         precio: 32990,
         precioFormateado: "$32.990",
-        imagen: "images/bcaa.jpeg",
+        imagen: "images/BCAA2000.webp",
         descripcion: "Aminoácidos esenciales para cuando querés seguir vivo después de pierna.",
         ingredientes: "Leucina, Isoleucina, Valina, sabor a victoria.",
         beneficios: "Mejora recuperación, evita catabolismo y le da sentido a hacer cardio (más o menos)."
@@ -45,7 +45,7 @@ const productos = [
         nombre: "Multivitamínico MGP",
         precio: 19990,
         precioFormateado: "$19.990",
-        imagen: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop&crop=center",
+        imagen: "images/multivitaminico.png",
         descripcion: "Todas las vitaminas que no tenés por comer fideos con ketchup.",
         ingredientes: "Vitaminas A-Z, minerales esenciales y un poco de remordimiento.",
         beneficios: "Apoya el sistema inmunológico, mejora la energía y te hace sentir que comés saludable aunque cenes pan con mate."
@@ -75,7 +75,7 @@ const productos = [
         nombre: "Magnesio",
         precio: 42990,
         precioFormateado: "$42.990",
-        imagen: "images/magnesio.jpeg",
+        imagen: "images/magnesio.webp",
         descripcion: "El suplemento que evita que te conviertas en una piedra contracturada.",
         ingredientes: "Citrato de magnesio, cápsula vegetal, y esperanza.",
         beneficios: "Reduce calambres, mejora sueño y relaja más que 3 capítulos de Bob Esponja."
