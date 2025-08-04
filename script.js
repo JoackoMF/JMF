@@ -2,7 +2,7 @@
 const productos = [
     {
         id: 1,
-        nombre: "Proteína Whey MGP",
+        nombre: "Proteína Whey",
         precio: 40323,
         precioFormateado: "$40.323",
     // según *Proteína De Suero Whey Protein Star Nutrition Doypack 2 lb* precio sin descuento $40.323 :contentReference[oaicite:1]{index=1}
