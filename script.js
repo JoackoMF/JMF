@@ -3,8 +3,9 @@ const productos = [
     {
         id: 1,
         nombre: "Proteína Whey MGP",
-        precio: 45990,
-        precioFormateado: "$45.990",
+        precio: 40323,
+        precioFormateado: "$40.323",
+    // según *Proteína De Suero Whey Protein Star Nutrition Doypack 2 lb* precio sin descuento $40.323 :contentReference[oaicite:1]{index=1}
         imagen: "images/wheyprotein.webp",
         descripcion: "Proteína de suero ultra refinada. Básicamente músculo en polvo.",
         ingredientes: "Suero de leche, aminoácidos, saborizante de 'ganás o ganás'.",
@@ -13,8 +14,9 @@ const productos = [
     {
         id: 2,
         nombre: "Creatina Monohidrato",
-        precio: 28990,
-        precioFormateado: "$28.990",
+        precio: 32567,
+        precioFormateado: "$32.567",
+    // Creatina 300 g doypack a $32.567 precio regular :contentReference[oaicite:2]{index=2}
         imagen: "images/creatina.webp",
         descripcion: "El polvo blanco legal más poderoso del mercado.",
         ingredientes: "Creatina monohidrato pura, sin cortes ni cuentos.",
@@ -23,8 +25,9 @@ const productos = [
     {
         id: 3,
         nombre: "BCAA Premium",
-        precio: 32990,
-        precioFormateado: "$32.990",
+        precio: 16618,
+        precioFormateado: "$16.618",
+    // BCAA 2000 x 120 caps precio regular $16.618 :contentReference[oaicite:3]{index=3}
         imagen: "images/BCAA2000.webp",
         descripcion: "Aminoácidos esenciales para cuando querés seguir vivo después de pierna.",
         ingredientes: "Leucina, Isoleucina, Valina, sabor a victoria.",
@@ -33,8 +36,9 @@ const productos = [
     {
         id: 4,
         nombre: "Omega 3 Ultra",
-        precio: 24990,
-        precioFormateado: "$24.990",
+        precio: 31946,
+        precioFormateado: "$31.946",
+    // Omega 3 Fish Oil 60 caps precio regular $31.946 :contentReference[oaicite:4]{index=4}
         imagen: "images/omega3.webp",
         descripcion: "Grasa buena que no te hace sentir culpable. Ni siquiera un poco.",
         ingredientes: "Aceite de pescado salvaje, vitamina E, cápsulas de gelatina.",
@@ -42,19 +46,21 @@ const productos = [
     },
     {
         id: 5,
-        nombre: "Multivitamínico MGP",
-        precio: 19990,
-        precioFormateado: "$19.990",
+        nombre: "Multivitamínico",
+        precio: 22826,
+        precioFormateado: "$22.826",
+    // Multivitamínico All in One 60 cápsulas precio regular $22.826 :contentReference[oaicite:5]{index=5}
         imagen: "images/multivitaminico.png",
         descripcion: "Todas las vitaminas que no tenés por comer fideos con ketchup.",
-        ingredientes: "Vitaminas A-Z, minerales esenciales y un poco de remordimiento.",
+        ingredientes: "Vitaminas A‑Z, minerales esenciales y un poco de remordimiento.",
         beneficios: "Apoya el sistema inmunológico, mejora la energía y te hace sentir que comés saludable aunque cenes pan con mate."
     },
     {
         id: 6,
         nombre: "Pre-Entreno Boost",
-        precio: 39990,
-        precioFormateado: "$39.990",
+        precio: 31235,
+        precioFormateado: "$31.235",
+    // Pump V8 Pre Workout 285 g precio regular $31.235 :contentReference[oaicite:6]{index=6}
         imagen: "images/preentreno.png",
         descripcion: "El diablo líquido. Vas a querer pelearle al aire.",
         ingredientes: "Cafeína, beta-alanina, motivación artificial.",
@@ -63,8 +69,9 @@ const productos = [
     {
         id: 7,
         nombre: "Glutamina Pura",
-        precio: 26990,
-        precioFormateado: "$26.990",
+        precio: 29811,
+        precioFormateado: "$29.811",
+    // Glutamina 300 g precio regular $29.811 :contentReference[oaicite:7]{index=7}
         imagen: "images/glutamina.webp",
         descripcion: "El santo grial de la recuperación. O al menos eso dicen los que la venden.",
         ingredientes: "Glutamina 100% micronizada.",
@@ -73,14 +80,16 @@ const productos = [
     {
         id: 8,
         nombre: "Magnesio",
-        precio: 42990,
-        precioFormateado: "$42.990",
+        precio: 14527,
+        precioFormateado: "$14.527",
+    // Citrato de Magnesio 60 cáps y 500 g precio regular $14.527 :contentReference[oaicite:8]{index=8}
         imagen: "images/magnesio.webp",
         descripcion: "El suplemento que evita que te conviertas en una piedra contracturada.",
         ingredientes: "Citrato de magnesio, cápsula vegetal, y esperanza.",
         beneficios: "Reduce calambres, mejora sueño y relaja más que 3 capítulos de Bob Esponja."
     }
 ];
+
 
 
 // Número de WhatsApp (cambiar por el número real)
