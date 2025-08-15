@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JMF - Suplementos Premium</title>
+    <title>JMF - Suplementos y Ropa Deportiva</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
             <nav class="nav">
                 <div class="logo">
                     <img src="jmf.png" alt="Logo de JMF" class="logo-img">
-                    <span>Suplementos Premium</span>
+                    <span>Suplementos y Ropa Premium</span>
                 </div>
                 <div class="cart-container">
                     <button class="cart-btn" id="cart-btn">
@@ -26,9 +26,17 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2>Tu Salud, Nuestra Prioridad</h2>
-                <p>Descubre nuestra línea completa de suplementos de alta calidad</p>
+                <h2>Tu Salud, Nuestro Estilo</h2>
+                <p>Equipa tu cuerpo y tu guardarropa para alcanzar tus metas</p>
             </div>
+        </div>
+    </section>
+
+    <section class="category-filter">
+        <div class="container">
+            <button class="filter-btn active" data-category="todos">Todos</button>
+            <button class="filter-btn" data-category="suplementos">Suplementos</button>
+            <button class="filter-btn" data-category="ropa">Ropa</button>
         </div>
     </section>
 
@@ -37,6 +45,28 @@
             <h2 class="section-title">Nuestros Productos</h2>
             <div class="products-grid" id="products-grid">
                 </div>
+        </div>
+    </section>
+
+    <section class="imc-calculator-section">
+        <div class="container">
+            <h2 class="section-title">Calculadora de IMC</h2>
+            <div class="imc-calculator-card">
+                <p>Calcula tu Índice de Masa Corporal (IMC) para saber si tu peso es saludable.</p>
+                <div class="input-group">
+                    <label for="peso">Peso (kg):</label>
+                    <input type="number" id="peso" placeholder="Ej: 70">
+                </div>
+                <div class="input-group">
+                    <label for="altura">Altura (cm):</label>
+                    <input type="number" id="altura" placeholder="Ej: 175">
+                </div>
+                <button id="calcular-imc-btn" class="add-to-cart-btn">Calcular IMC</button>
+                <div id="resultado-imc" class="resultado-imc" style="display: none;">
+                    <p>Tu IMC es: <strong id="valor-imc"></strong></p>
+                    <p>Clasificación: <span id="clasificacion-imc"></span></p>
+                </div>
+            </div>
         </div>
     </section>
 

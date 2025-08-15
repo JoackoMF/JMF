@@ -57,7 +57,7 @@ body {
 }
 
 .logo h1 {
-    display: none; /* Ocultamos el h1 para usar la imagen */
+    display: none;
 }
 
 .logo span {
@@ -369,9 +369,39 @@ body {
     margin: 0 auto;
 }
 
+/* Category Filter */
+.category-filter {
+    padding: 2rem 0 1rem;
+    text-align: center;
+}
+
+.filter-btn {
+    background: #1a1a1a;
+    color: var(--blanco);
+    border: 2px solid #333;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background: #252525;
+    border-color: #555;
+}
+
+.filter-btn.active {
+    background: var(--azul-jmf);
+    border-color: var(--azul-jmf);
+    box-shadow: 0 4px 15px rgba(15, 29, 255, 0.3);
+}
+
 /* Products Section */
 .products-section {
-    padding: 3rem 0;
+    padding: 1rem 0 3rem;
 }
 
 .section-title {
@@ -492,6 +522,69 @@ body {
 
 .footer-contact p {
     opacity: 0.9;
+}
+
+/* IMC Calculator Section */
+.imc-calculator-section {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.imc-calculator-card {
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: var(--sombra-suave);
+}
+
+.input-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background: #000;
+    color: var(--blanco);
+    font-size: 1rem;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--azul-jmf);
+}
+
+.resultado-imc {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background: #222;
+    border: 2px solid var(--azul-jmf);
+}
+
+.resultado-imc p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+#valor-imc {
+    color: var(--azul-jmf);
+    font-size: 1.5rem;
+}
+
+#clasificacion-imc {
+    font-weight: bold;
 }
 
 /* Responsive Design */

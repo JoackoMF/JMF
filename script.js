@@ -2,10 +2,10 @@
 const productos = [
     {
         id: 1,
-        nombre: "Proteína Whey",
-        precio: 40323,
-        precioFormateado: "$40.323",
-    // según *Proteína De Suero Whey Protein Star Nutrition Doypack 2 lb* precio sin descuento $40.323 :contentReference[oaicite:1]{index=1}
+        nombre: "Proteína Whey MGP",
+        categoria: "suplementos",
+        precio: 45990,
+        precioFormateado: "$45.990",
         imagen: "images/wheyprotein.webp",
         descripcion: "Proteína de suero ultra refinada. Básicamente músculo en polvo.",
         ingredientes: "Suero de leche, aminoácidos, saborizante de 'ganás o ganás'.",
@@ -14,9 +14,9 @@ const productos = [
     {
         id: 2,
         nombre: "Creatina Monohidrato",
-        precio: 32567,
-        precioFormateado: "$32.567",
-    // Creatina 300 g doypack a $32.567 precio regular :contentReference[oaicite:2]{index=2}
+        categoria: "suplementos",
+        precio: 28990,
+        precioFormateado: "$28.990",
         imagen: "images/creatina.webp",
         descripcion: "El polvo blanco legal más poderoso del mercado.",
         ingredientes: "Creatina monohidrato pura, sin cortes ni cuentos.",
@@ -25,9 +25,9 @@ const productos = [
     {
         id: 3,
         nombre: "BCAA Premium",
-        precio: 16618,
-        precioFormateado: "$16.618",
-    // BCAA 2000 x 120 caps precio regular $16.618 :contentReference[oaicite:3]{index=3}
+        categoria: "suplementos",
+        precio: 32990,
+        precioFormateado: "$32.990",
         imagen: "images/BCAA2000.webp",
         descripcion: "Aminoácidos esenciales para cuando querés seguir vivo después de pierna.",
         ingredientes: "Leucina, Isoleucina, Valina, sabor a victoria.",
@@ -36,9 +36,9 @@ const productos = [
     {
         id: 4,
         nombre: "Omega 3 Ultra",
-        precio: 31946,
-        precioFormateado: "$31.946",
-    // Omega 3 Fish Oil 60 caps precio regular $31.946 :contentReference[oaicite:4]{index=4}
+        categoria: "suplementos",
+        precio: 24990,
+        precioFormateado: "$24.990",
         imagen: "images/omega3.webp",
         descripcion: "Grasa buena que no te hace sentir culpable. Ni siquiera un poco.",
         ingredientes: "Aceite de pescado salvaje, vitamina E, cápsulas de gelatina.",
@@ -46,21 +46,21 @@ const productos = [
     },
     {
         id: 5,
-        nombre: "Multivitamínico",
-        precio: 22826,
-        precioFormateado: "$22.826",
-    // Multivitamínico All in One 60 cápsulas precio regular $22.826 :contentReference[oaicite:5]{index=5}
+        nombre: "Multivitamínico MGP",
+        categoria: "suplementos",
+        precio: 19990,
+        precioFormateado: "$19.990",
         imagen: "images/multivitaminico.png",
         descripcion: "Todas las vitaminas que no tenés por comer fideos con ketchup.",
-        ingredientes: "Vitaminas A‑Z, minerales esenciales y un poco de remordimiento.",
+        ingredientes: "Vitaminas A-Z, minerales esenciales y un poco de remordimiento.",
         beneficios: "Apoya el sistema inmunológico, mejora la energía y te hace sentir que comés saludable aunque cenes pan con mate."
     },
     {
         id: 6,
         nombre: "Pre-Entreno Boost",
-        precio: 31235,
-        precioFormateado: "$31.235",
-    // Pump V8 Pre Workout 285 g precio regular $31.235 :contentReference[oaicite:6]{index=6}
+        categoria: "suplementos",
+        precio: 39990,
+        precioFormateado: "$39.990",
         imagen: "images/preentreno.png",
         descripcion: "El diablo líquido. Vas a querer pelearle al aire.",
         ingredientes: "Cafeína, beta-alanina, motivación artificial.",
@@ -69,9 +69,9 @@ const productos = [
     {
         id: 7,
         nombre: "Glutamina Pura",
-        precio: 29811,
-        precioFormateado: "$29.811",
-    // Glutamina 300 g precio regular $29.811 :contentReference[oaicite:7]{index=7}
+        categoria: "suplementos",
+        precio: 26990,
+        precioFormateado: "$26.990",
         imagen: "images/glutamina.webp",
         descripcion: "El santo grial de la recuperación. O al menos eso dicen los que la venden.",
         ingredientes: "Glutamina 100% micronizada.",
@@ -80,24 +80,87 @@ const productos = [
     {
         id: 8,
         nombre: "Magnesio",
-        precio: 14527,
-        precioFormateado: "$14.527",
-    // Citrato de Magnesio 60 cáps y 500 g precio regular $14.527 :contentReference[oaicite:8]{index=8}
+        categoria: "suplementos",
+        precio: 42990,
+        precioFormateado: "$42.990",
         imagen: "images/magnesio.webp",
         descripcion: "El suplemento que evita que te conviertas en una piedra contracturada.",
         ingredientes: "Citrato de magnesio, cápsula vegetal, y esperanza.",
         beneficios: "Reduce calambres, mejora sueño y relaja más que 3 capítulos de Bob Esponja."
+    },
+    {
+        id: 9,
+        nombre: "Musculosa JMF",
+        categoria: "ropa",
+        precio: 15000,
+        precioFormateado: "$15.000",
+        imagen: "images/musculosa.png",
+        descripcion: "Musculosa de algodón ultra suave y transpirable, ideal para tus entrenamientos.",
+        ingredientes: "95% Algodón, 5% Elastano.",
+        beneficios: "Comodidad, transpirabilidad, libertad de movimiento."
+    },
+    {
+        id: 10,
+        nombre: "Short de Entrenamiento",
+        categoria: "ropa",
+        precio: 18500,
+        precioFormateado: "$18.500",
+        imagen: "images/short.png",
+        descripcion: "Shorts livianos con forro de compresión integrado, diseñados para máximo rendimiento.",
+        ingredientes: "100% Poliéster.",
+        beneficios: "Secado rápido, bolsillo con cierre, soporte de compresión."
+    },
+    {
+        id: 11,
+        nombre: "Remera de Compresión",
+        categoria: "ropa",
+        precio: 22000,
+        precioFormateado: "$22.000",
+        imagen: "images/compresion.png",
+        descripcion: "Remera que mejora la circulación y reduce la fatiga muscular. Perfecta para entrenamientos intensos.",
+        ingredientes: "88% Poliéster, 12% Elastano.",
+        beneficios: "Mejora del rendimiento, recuperación más rápida, soporte muscular."
+    },
+    {
+        id: 12,
+        nombre: "Calza JMF",
+        categoria: "ropa",
+        precio: 21000,
+        precioFormateado: "$21.000",
+        imagen: "images/calza.png",
+        descripcion: "Calza de tiro alto con tela que se adapta a tu cuerpo. Máxima comodidad y estilo.",
+        ingredientes: "85% Poliéster, 15% Spandex.",
+        beneficios: "Ajuste perfecto, control de abdomen, tejido que no se transparenta."
+    },
+    {
+        id: 13,
+        nombre: "Top Deportivo",
+        categoria: "ropa",
+        precio: 14000,
+        precioFormateado: "$14.000",
+        imagen: "images/top.png",
+        descripcion: "Top de soporte medio con diseño elegante y transpirable. Ideal para cualquier actividad física.",
+        ingredientes: "80% Nylon, 20% Spandex.",
+        beneficios: "Soporte medio, remoción de humedad, comodidad durante el ejercicio."
+    },
+    {
+        id: 14,
+        nombre: "Enterito para Gimnasio",
+        categoria: "ropa",
+        precio: 25000,
+        precioFormateado: "$25.000",
+        imagen: "images/enterito.png",
+        descripcion: "Enterito de una sola pieza, cómodo y con estilo para destacar en el gimnasio.",
+        ingredientes: "75% Poliéster, 25% Spandex.",
+        beneficios: "Versatilidad, libertad de movimiento, estilo único."
     }
 ];
-
-
 
 // Número de WhatsApp (cambiar por el número real)
 const numeroWhatsApp = "5491169135436"; // Formato: código país + número sin +
 
 // Estado del carrito
 let carrito = [];
-
 
 // Elementos del DOM
 let cartModal, cartOverlay, cartBody, cartCount, cartTotal, cartFooter, emptyCart;
@@ -189,7 +252,6 @@ function actualizarCarrito() {
     localStorage.setItem('carrito', JSON.stringify(carrito));
 }
 
-
 // Función para renderizar items del carrito
 function renderizarItemsCarrito() {
     const itemsHTML = carrito.map(item => `
@@ -238,11 +300,6 @@ function realizarCheckout() {
     const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
 
     window.open(urlWhatsApp, '_blank');
-
-    // Opcional: limpiar carrito después del checkout
-    // carrito = [];
-    // actualizarCarrito();
-    // cerrarCarrito();
 }
 
 // Funciones para manejar el modal del carrito
@@ -309,28 +366,26 @@ function crearTarjetaProducto(producto) {
     `;
 }
 
-
-// Función para cargar todos los productos
-function cargarProductos() {
+// Función para cargar productos por categoría
+function cargarProductos(categoria = 'todos') {
     const grid = document.getElementById('products-grid');
-
-    // Mostrar loading
     grid.innerHTML = '<div class="loading">Cargando productos...</div>';
 
-    // Simular una pequeña carga (opcional)
     setTimeout(() => {
-        // Generar HTML para todos los productos
-        const productosHTML = productos.map(producto => crearTarjetaProducto(producto)).join('');
+        const productosFiltrados = categoria === 'todos' ? productos : productos.filter(p => p.categoria === categoria);
 
-        // Insertar en el DOM
+        if (productosFiltrados.length === 0) {
+            grid.innerHTML = '<div class="loading">No se encontraron productos en esta categoría.</div>';
+            return;
+        }
+
+        const productosHTML = productosFiltrados.map(producto => crearTarjetaProducto(producto)).join('');
         grid.innerHTML = productosHTML;
 
-        // Agregar animación de entrada
         const tarjetas = grid.querySelectorAll('.product-card');
         tarjetas.forEach((tarjeta, index) => {
             tarjeta.style.opacity = '0';
             tarjeta.style.transform = 'translateY(20px)';
-
             setTimeout(() => {
                 tarjeta.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
                 tarjeta.style.opacity = '1';
@@ -344,6 +399,49 @@ function cargarProductos() {
 function manejarErrorImagen(img) {
     img.src = 'https://via.placeholder.com/400x400/0f1dff/FFFFFF?text=JMF+Producto';
     img.alt = 'Imagen no disponible';
+}
+
+// Funciones para la calculadora de IMC
+function calcularIMC() {
+    const pesoInput = document.getElementById('peso');
+    const alturaInput = document.getElementById('altura');
+    const resultadoDiv = document.getElementById('resultado-imc');
+    const valorSpan = document.getElementById('valor-imc');
+    const clasificacionSpan = document.getElementById('clasificacion-imc');
+
+    const peso = parseFloat(pesoInput.value);
+    const altura = parseFloat(alturaInput.value);
+
+    if (isNaN(peso) || isNaN(altura) || peso <= 0 || altura <= 0) {
+        alert('Por favor, ingresa valores válidos para peso y altura.');
+        return;
+    }
+
+    const alturaMetros = altura / 100;
+    const imc = peso / (alturaMetros * alturaMetros);
+    const imcRedondeado = imc.toFixed(2);
+
+    let clasificacion = '';
+    let color = '';
+
+    if (imc < 18.5) {
+        clasificacion = 'Bajo peso';
+        color = '#ffc107'; // Amarillo
+    } else if (imc >= 18.5 && imc < 25) {
+        clasificacion = 'Normal';
+        color = '#28a745'; // Verde
+    } else if (imc >= 25 && imc < 30) {
+        clasificacion = 'Sobrepeso';
+        color = '#fd7e14'; // Naranja
+    } else {
+        clasificacion = 'Obesidad';
+        color = '#dc3545'; // Rojo
+    }
+
+    valorSpan.textContent = imcRedondeado;
+    clasificacionSpan.textContent = clasificacion;
+    clasificacionSpan.style.color = color;
+    resultadoDiv.style.display = 'block';
 }
 
 // Event Listeners
@@ -369,101 +467,39 @@ function configurarEventListeners() {
     document.querySelector('.cart-content').addEventListener('click', (e) => {
         e.stopPropagation();
     });
+
+    // Botones de filtro de categoría
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const categoria = btn.dataset.category;
+            cargarProductos(categoria);
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        });
+    });
+
+    // Botón de la calculadora de IMC
+    document.getElementById('calcular-imc-btn').addEventListener('click', calcularIMC);
 }
 
 // Inicializar cuando el DOM esté cargado
 document.addEventListener('DOMContentLoaded', function() {
     inicializarElementosDOM();
-    // 👉 Cargar carrito desde localStorage al iniciar
     const carritoGuardado = localStorage.getItem('carrito');
     if (carritoGuardado) {
         carrito = JSON.parse(carritoGuardado);
     }
 
     configurarEventListeners();
-    // Only load products on index.html
     if (document.getElementById('products-grid')) {
-        cargarProductos();
+        cargarProductos('todos');
     }
     actualizarCarrito();
 
-    // Agregar listener para errores de imágenes
     document.addEventListener('error', function(e) {
         if (e.target.tagName === 'IMG') {
             manejarErrorImagen(e.target);
         }
     }, true);
-
-    // Agregar estilos CSS para animaciones
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes slideInRight {
-            from {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        .notificacion {
-            animation: slideInRight 0.3s ease !important;
-        }
-    `;
-    document.head.appendChild(style);
 });
-
-// Función para efectos adicionales
-function efectosAdicionales() {
-    // Efecto de parallax suave en el hero
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const hero = document.querySelector('.hero');
-        if (hero) {
-            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-        }
-    });
-
-    // Animación del contador del carrito
-    function animarContador() {
-        const contador = document.getElementById('cart-count');
-        contador.style.transform = 'scale(1.2)';
-        setTimeout(() => {
-            contador.style.transform = 'scale(1)';
-        }, 200);
-    }
-
-    // Observar cambios en el contador
-    const observer = new MutationObserver(animarContador);
-    observer.observe(cartCount, { childList: true, characterData: true, subtree: true });
-}
-
-// Funciones de utilidad para administración
-function cambiarNumeroWhatsApp(nuevoNumero) {
-    numeroWhatsApp = nuevoNumero;
-    cargarProductos(); // Recargar productos con el nuevo número
-}
-
-function vaciarCarrito() {
-    carrito = [];
-    localStorage.removeItem('carrito');
-    actualizarCarrito();
-    mostrarNotificacion('Carrito vaciado');
-}
-
-function obtenerEstadisticasCarrito() {
-    return {
-        totalItems: contarItems(),
-        totalPrecio: calcularTotal(),
-        productos: carrito.map(item => ({
-            nombre: item.nombre,
-            cantidad: item.cantidad,
-            subtotal: item.precio * item.cantidad
-        }))
-    };
-}
-
-// Inicializar efectos adicionales
-document.addEventListener('DOMContentLoaded', efectosAdicionales);
