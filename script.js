@@ -94,21 +94,21 @@ const productos = [
         categoria: "ropa",
         precio: 15000,
         precioFormateado: "$15.000",
-        imagen: "images/musculosa.png",
+        imagen: "images/jmfmusculosa.png",
         descripcion: "Musculosa de algodón ultra suave y transpirable, ideal para tus entrenamientos.",
         ingredientes: "95% Algodón, 5% Elastano.",
         beneficios: "Comodidad, transpirabilidad, libertad de movimiento."
     },
     {
         id: 10,
-        nombre: "Short de Entrenamiento",
+        nombre: "Hoodie JMF",
         categoria: "ropa",
         precio: 18500,
         precioFormateado: "$18.500",
-        imagen: "images/short.png",
-        descripcion: "Shorts livianos con forro de compresión integrado, diseñados para máximo rendimiento.",
-        ingredientes: "100% Poliéster.",
-        beneficios: "Secado rápido, bolsillo con cierre, soporte de compresión."
+        imagen: "images/hoodiejmf.png",
+        descripcion: "Hoodie ultra fachero, para que llegues al gimnasio derramando facha.",
+        ingredientes: "100% Algodón.",
+        beneficios: "No te vas a cagar de frio en el camino y te vas a llevar todas las miradas."
     },
     {
         id: 11,
@@ -116,43 +116,10 @@ const productos = [
         categoria: "ropa",
         precio: 22000,
         precioFormateado: "$22.000",
-        imagen: "images/compresion.png",
+        imagen: "images/compresionjmf.png",
         descripcion: "Remera que mejora la circulación y reduce la fatiga muscular. Perfecta para entrenamientos intensos.",
         ingredientes: "88% Poliéster, 12% Elastano.",
         beneficios: "Mejora del rendimiento, recuperación más rápida, soporte muscular."
-    },
-    {
-        id: 12,
-        nombre: "Calza JMF",
-        categoria: "ropa",
-        precio: 21000,
-        precioFormateado: "$21.000",
-        imagen: "images/calza.png",
-        descripcion: "Calza de tiro alto con tela que se adapta a tu cuerpo. Máxima comodidad y estilo.",
-        ingredientes: "85% Poliéster, 15% Spandex.",
-        beneficios: "Ajuste perfecto, control de abdomen, tejido que no se transparenta."
-    },
-    {
-        id: 13,
-        nombre: "Top Deportivo",
-        categoria: "ropa",
-        precio: 14000,
-        precioFormateado: "$14.000",
-        imagen: "images/top.png",
-        descripcion: "Top de soporte medio con diseño elegante y transpirable. Ideal para cualquier actividad física.",
-        ingredientes: "80% Nylon, 20% Spandex.",
-        beneficios: "Soporte medio, remoción de humedad, comodidad durante el ejercicio."
-    },
-    {
-        id: 14,
-        nombre: "Enterito para Gimnasio",
-        categoria: "ropa",
-        precio: 25000,
-        precioFormateado: "$25.000",
-        imagen: "images/enterito.png",
-        descripcion: "Enterito de una sola pieza, cómodo y con estilo para destacar en el gimnasio.",
-        ingredientes: "75% Poliéster, 25% Spandex.",
-        beneficios: "Versatilidad, libertad de movimiento, estilo único."
     }
 ];
 
